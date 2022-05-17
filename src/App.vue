@@ -1,27 +1,22 @@
 <template>
     <div class="app">
-        <h1>hello vue2+vite</h1>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/test">test</router-link>
-        <router-view />
-
-        
+        <nav-bar></nav-bar>
+        <goods-shop></goods-shop>
+        <submit-bar></submit-bar>
     </div>
 </template>
-
 <script>
-    export default {
-        
-    }
+import NavBar from './views/NavBar.vue';
+import GoodsShop from './views/GoodsShop.vue';
+import SubmitBar from './views/SubmitBar.vue';
+export default {
+    components: ({
+        NavBar,
+        GoodsShop,
+        SubmitBar
+    })
+}
 </script>
 <style lang="scss">
-    .App {
-        ul {
-            li {
-                list-style: none;
-            }
-        }
-    }
 </style>
 
